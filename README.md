@@ -13,6 +13,7 @@ Cloudflare Tunnel for internal services (n8n) using the
 cloudflared tunnel login
 cloudflared tunnel create k3s-tunnel
 cloudflared tunnel route dns k3s-tunnel n8n.jmake.space
+cloudflared tunnel route dns k3s-tunnel photos.jmake.space
 ```
 
 ## Configure the tunnel
@@ -32,5 +33,6 @@ kubectl apply -f k8s/deployment.yaml
 
 ## Notes
 - n8n service is expected at `http://n8n.n8n.svc.cluster.local:80`.
+- Immich (photos) is proxied to `http://192.168.1.112:2283` (pi5d03).
 - Add additional hostnames in `k8s/configmap.yaml` if you want more services.
 *** End Patch"}']}"}] }
