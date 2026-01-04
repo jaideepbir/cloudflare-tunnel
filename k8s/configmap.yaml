@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cloudflared-config
+  namespace: cloudflare
+data:
+  config.yaml: |
+    tunnel: TUNNEL_UUID
+    credentials-file: /etc/cloudflared/credentials.json
+    ingress:
+      - hostname: n8n.jmake.space
+        service: http://n8n.n8n.svc.cluster.local:5678
+      - hostname: pihole.jmake.space
+        service: http://192.168.1.135
+      - service: http_status:404
