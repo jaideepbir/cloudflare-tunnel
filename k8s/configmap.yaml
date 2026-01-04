@@ -5,11 +5,9 @@ metadata:
   namespace: cloudflare
 data:
   config.yaml: |
-    tunnel: TUNNEL_UUID
+    tunnel: ef31ed8e-866f-4872-969a-f6e3a44c269a
     credentials-file: /etc/cloudflared/credentials.json
     ingress:
       - hostname: n8n.jmake.space
         service: http://n8n.n8n.svc.cluster.local:5678
-      - hostname: pihole.jmake.space
-        service: http://192.168.1.135
       - service: http_status:404
