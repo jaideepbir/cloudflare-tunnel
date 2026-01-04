@@ -11,5 +11,5 @@ data:
       - hostname: n8n.jmake.space
         service: http://n8n.n8n.svc.cluster.local:80
       - hostname: photos.jmake.space
-        service: http://192.168.1.112:2283
+        service: http://192.168.1.132:2283
       - service: http_status:404

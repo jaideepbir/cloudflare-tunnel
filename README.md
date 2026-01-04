@@ -33,6 +33,6 @@ kubectl apply -f k8s/deployment.yaml
 
 ## Notes
 - n8n service is expected at `http://n8n.n8n.svc.cluster.local:80`.
-- Immich (photos) is proxied to `http://192.168.1.112:2283` (pi5d03).
+- Immich (photos) is proxied to `http://192.168.1.132:2283` (pi5d03).
 - Add additional hostnames in `k8s/configmap.yaml` if you want more services.
 *** End Patch"}']}"}] }
