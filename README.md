@@ -31,6 +31,6 @@ kubectl apply -f k8s/deployment.yaml
 ```
 
 ## Notes
-- n8n service is expected at `http://n8n.n8n.svc.cluster.local:5678`.
+- n8n service is expected at `http://n8n.n8n.svc.cluster.local:80`.
 - Add additional hostnames in `k8s/configmap.yaml` if you want more services.
 *** End Patch"}']}"}] }
