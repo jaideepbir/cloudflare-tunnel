@@ -8,6 +8,7 @@ Cloudflare Tunnel for internal services (n8n) using the
 Cloudflare DNS -> Tunnel (k3s: cloudflare namespace)
   - n8n.jmake.space -> n8n.n8n.svc.cluster.local:80
   - photos.jmake.space -> 192.168.1.132:2283 (pi5d03)
+  - wiki.jmake.space -> wiki-bookstack.wiki.svc.cluster.local:80
 ```
 
 ## Prereqs
@@ -21,6 +22,7 @@ cloudflared tunnel login
 cloudflared tunnel create k3s-tunnel
 cloudflared tunnel route dns k3s-tunnel n8n.jmake.space
 cloudflared tunnel route dns k3s-tunnel photos.jmake.space
+cloudflared tunnel route dns k3s-tunnel wiki.jmake.space
 ```
 
 ## Configure the tunnel
