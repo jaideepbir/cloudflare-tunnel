@@ -3,6 +3,13 @@
 Cloudflare Tunnel for internal services (n8n) using the
 `jmake.space` zone.
 
+## Architecture
+```
+Cloudflare DNS -> Tunnel (k3s: cloudflare namespace)
+  - n8n.jmake.space -> n8n.n8n.svc.cluster.local:80
+  - photos.jmake.space -> 192.168.1.132:2283 (pi5d03)
+```
+
 ## Prereqs
 - `cloudflared` CLI installed locally
 - Domain `jmake.space` managed in Cloudflare
@@ -32,6 +39,7 @@ kubectl apply -f k8s/deployment.yaml
 ```
 
 ## Notes
+- Tunnel UUID: `ef31ed8e-866f-4872-969a-f6e3a44c269a`
 - n8n service is expected at `http://n8n.n8n.svc.cluster.local:80`.
 - Immich (photos) is proxied to `http://192.168.1.132:2283` (pi5d03).
 - Add additional hostnames in `k8s/configmap.yaml` if you want more services.
